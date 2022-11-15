@@ -28,7 +28,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>17</java.version>
-        <spring-boot.repackage.skip>true</spring-boot.repackage.skip>
+<!--        <spring-boot.repackage.skip>true</spring-boot.repackage.skip>-->
     </properties>
 
     <dependencies>
@@ -42,8 +42,18 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <configuration>
+                    <goal>install</goal>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 
+    <scm>
+        <developerConnection>scm:git:git@github.com:huynt0915/sfg-pet-clinic.git</developerConnection>
+    </scm>
 
 </project>
